@@ -195,7 +195,7 @@ a child-context can receive options at inclusion time. One scenario is to pass a
 
 ### Import from global object / window
 
-By appending the name of the object after the path, like:
+Handled for all supported containers. The global object is available as `Source.global`. By appending the name of the object after the path, like:
 `jquery.js jQuery`
 
 
@@ -265,6 +265,19 @@ BASE - Full url + ROOT
 The current detected container, such as 'HTML', 'Node' or 'Worker'.
 
 
+`Source.isMobile`
+If running in a mobile device.
+
+`Source.isHTML`
+If the current context is a main-thread with all HTML5 features.
+
+`Source.isWorker`
+If the current context is in a worker.
+
+`Source.isNode`
+If the current context is in NodeJS.
+
+
 ##### Functions
 
 `Source.filename(url)`
@@ -281,6 +294,4 @@ Starts to download a text, buffer or a blob. Text will be converted into a blob 
 
 `Source.stringify(object)`
 Turns a JS object into it's source code string version. Functions are supported too.
-
-
 
