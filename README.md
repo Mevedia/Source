@@ -110,6 +110,7 @@ Source.create({
    
    	// First parameter is the context
 
+	// 'this' is the file
    }
 
 });
