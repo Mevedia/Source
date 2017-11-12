@@ -11,7 +11,7 @@ It provides a unified workflow for developing in different environment, such as 
 Source creates contexts with manifest objects. Included files are migrated into the context object.
 
 
-`
+```
 Source.create({
 
    name: 'My App',
@@ -54,7 +54,7 @@ Source.create({
    }
 
 });
-`
+```
 
 #### Includes
 
@@ -62,7 +62,7 @@ Includes are module files. The context they are included from will be passed as 
 a object. If a `displayName` property is provided, it will be appended to the context with this name.
 
 
-`
+```
 Source.exports([
 
     'memory.js'
@@ -82,8 +82,7 @@ Source.exports([
 		displayName: 'MyLib'
 	}
 });
-
-`
+```
 
 #### Query parameters
 
@@ -108,7 +107,7 @@ A tree structure of all includes and their includes will be shown. The manifest 
 #### Build options
 
 
-`
+```
 Source.create({
 
 	name: 'My App',
@@ -138,7 +137,7 @@ Source.create({
     }
 
 });
-`
+```
 
 #### Context events
 
@@ -157,7 +156,7 @@ Once all includes are loaded, this event is fired. Another list of files can be 
 A worker will be loaded with source and handled as a file same as being in the main-thread.
 
 
-`
+```
 Source.exports(function(app) {
 
 	// Load 'thread.js', in the same directory as this file
@@ -169,8 +168,7 @@ Source.exports(function(app) {
 	});
 	
 });
-
-`
+```
 
 
 
@@ -218,6 +216,7 @@ The include with this flag won't be passed as parameter.
 
 ### Custom loader
 
+```
 Source.Loader.add({
 	type: 'asset',						// Type of file
 	extensions: ['asset', 'pkg'],		// All file extensions handled by this loader
@@ -234,6 +233,7 @@ Source.Loader.add({
 		Worker: 'HTML'	// If the loading method is the same as another
 	}
 });
+```
 
 
 ### Internals
