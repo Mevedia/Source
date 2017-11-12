@@ -144,6 +144,27 @@ Source.exports([
 });
 ```
 
+
+#### Create a Worker
+
+A worker will be loaded with source and handled as a file same as being in the main-thread.
+
+
+```
+Source.exports(function(app) {
+
+	// Load 'thread.js', in the same directory as this file
+	
+	const thread = this.worker('/thread.js', thread => {
+	
+		thread.onmessage = function(e) {};
+	
+	});
+	
+});
+```
+
+
 #### Query parameters
 
 If the parameter `source` is in the URL, the application will load in the backend if no value is given. 
@@ -230,26 +251,6 @@ When a context has completed, this event is fired right before `main` is called.
 
 Once all includes are loaded, this event is fired. Another list of files can be added now as if they were declared as includes in the manifest. The event is repeated as long as files get appended at this point.
 
-
-
-#### Create a Worker
-
-A worker will be loaded with source and handled as a file same as being in the main-thread.
-
-
-```
-Source.exports(function(app) {
-
-	// Load 'thread.js', in the same directory as this file
-	
-	const thread = this.worker('/thread.js', thread => {
-	
-		thread.onmessage = function(e) {};
-	
-	});
-	
-});
-```
 
 
 
