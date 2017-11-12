@@ -243,12 +243,12 @@ Source provides some helpful functions out of box.
 
 The `Source.PATH` object contains several path strings:
 
-`
+```
 HOME - Path of the directory were `source.js` is loaded from
 MAIN - Path of the directory the project main-context file is loaded from
 ROOT - Relative path from the hostname, default is just '/' (optional)
 BASE - Full url + ROOT
-`
+```
 
 ##### Constants
 
