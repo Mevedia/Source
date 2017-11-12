@@ -68,10 +68,10 @@ Source.create({
 
     },
 
-    // A context can have 3 include stages, can be globally predefined in a config.
+    // A context can have 3 include stages.
     // Not all might be required, depending on the structure of the project.
     
-    // Optional: globally required files
+    // Optional: globally required files (can be predefined in a config)
     
     use: [
     	
