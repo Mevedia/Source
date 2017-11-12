@@ -115,6 +115,7 @@ Project builds and executes with the final build
 
 A tree structure of all includes and their includes will be shown. The manifest can be edited and the build process can be executed with a preview of the final bundled file. All process information is shown in the console.
 
+Plugins can be made for different stages, such as collection, processing, generating and any tasks in between. All tasks can be done asynchronous in the queue, for example the closure compiler is threaded. Examples can be found in `build/stack`.
 
 
 #### Build options
