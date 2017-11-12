@@ -21,8 +21,28 @@ Source can be used hybrid, for building and production as dynamic module loader.
 
 ## Creating a context
 
-Source creates contexts with manifest objects. Included files are migrated into the context object.
+Source creates contexts with manifest objects. Included files are migrated into the context object. A simple minimal context that inlcudes a stylesheet and a include for example:
 
+
+```
+Source.create({
+
+    name: 'My App',
+    
+    includes: [
+        'network.js',
+        '/styles/style.css'
+    ],
+
+    main: function(app, Network) {
+
+        // First parameter is the context 
+
+    }
+});
+```
+
+More complex manifest with explanation:
 
 ```
 Source.create({
