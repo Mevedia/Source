@@ -88,13 +88,16 @@ Source.exports([
 
 If the parameter `source` is in the URL, the application will load in the backend if no value is given. 
 
-* <no value>
+* No value
+
 Project loads with backend
 
 * build
+
 Project builds and outputs as declared in the manifest (download by default)
 
 * run
+
 Project builds and executes with the final build
 
 
