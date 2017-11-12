@@ -48,11 +48,16 @@ Source.create({
 
     },
 
-    // A context can have 3 include stages, can be globally predefined in a config. Not all might be used, depending on
-    // the structure of the project.
+    // A context can have 3 include stages, can be globally predefined in a config.
+    // Not all might be required, depending on the structure of the project.
     
     // Optional: globally required files
+    
     use: [
+    	
+	// Inlcudes jquery from source-directory, fetches from window / global, prevents
+	// minification, only in HTML environment
+	
     	'@jquery.js $ -min -only:HTML'
     ],
     
