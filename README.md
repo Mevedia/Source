@@ -6,15 +6,18 @@ manifest, by passing query parameters or the in-built backend with UI and previe
 It provides a unified workflow for developing in different environment, such as in the web, in worker and NodeJS. The path handling and file loading is the same everywhere.
 
 
-## UI
-Calling the project with `source` parameter without value (like http://localhost/myproject?source) it will load the project with backend
+## Getting started
 
-![alt text](https://mevedia.com/img/source_backend3.png "UI")
+Source can be used hybrid, for building and production as dynamic module loader. For using in the browser only source and the main file is required.
 
-The compiled project can be previewed.
-
-![alt text](https://mevedia.com/img/source_backend1.png "Preview")
-
+```
+<html>
+	<head>
+		<script src="pathToSource/source.js"></script>
+		<script src="index.js"></script>
+	</head>
+</html>
+```
 
 ## Creating a context
 
@@ -111,11 +114,22 @@ Project builds and outputs as declared in the manifest (download by default)
 Project builds and executes with the final build
 
 
-#### Backend
+## UI Backend
 
 A tree structure of all includes and their includes will be shown. The manifest can be edited and the build process can be executed with a preview of the final bundled file. All process information is shown in the console.
 
 Plugins can be made for different stages, such as collection, processing, generating and any tasks in between. All tasks can be done asynchronous in the queue, for example the closure compiler is threaded. Examples can be found in `build/stack`.
+
+
+Calling the project with `source` parameter without value (like http://localhost/myproject?source) it will load the project with backend
+
+![alt text](https://mevedia.com/img/source_backend3.png "UI")
+
+The compiled project can be previewed.
+
+![alt text](https://mevedia.com/img/source_backend1.png "Preview")
+
+
 
 
 #### Build options
