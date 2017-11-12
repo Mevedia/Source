@@ -48,7 +48,14 @@ More complex manifest with explanation:
 Source.create({
 
    name: 'My App',
+   
+   // The options property is passed to child contexts, so they can be configured in advance, for example to defer the
+   // application execution.
+   
+   options: {},
 
+   // The build stack only used with 'source' query parameter
+   
    build: {
 
         container: 'HTML',
@@ -101,7 +108,7 @@ Source.create({
 
    main: function(app, SE, Network, Workspace) {
    
-   // First parameter is the context 
+   	// First parameter is the context
 
    }
 
