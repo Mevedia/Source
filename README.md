@@ -116,28 +116,32 @@ Source.create({
 	name: 'My App',
 	
 	build: {
+
+		// If declared, explicitly only compatible with given container
+		container: 'HTML',
 		
-		// If declared, explicitly only for given container
-        container: 'HTML',
-		
+		// Prefered output method by default 'download', the 'post' plugin can be used
+		// for example to post the compiled source to a url.
+		output: 'download',
+
 		// Prepend Source for standalone, if Source isn't used globally. Default: true
 		bootstrap: true,
 
 		// Build stack, plugins are located in "build/stack/<name>/<name>.js"
-        stack: [
-            {
-                name: 'bundle'
-            },
-            {
-                name: 'cc',
-                enabled: false,
-                flags: {
-                    compilationLevel: 'SIMPLE'
-                }
-            }
-        ]
+		stack: [
+		    {
+			name: 'bundle'
+		    },
+		    {
+			name: 'cc',
+			enabled: false,
+			flags: {
+			    compilationLevel: 'SIMPLE'
+			}
+		    }
+		]
 
-    }
+    	}
 
 });
 ```
@@ -147,9 +151,11 @@ Source.create({
 A context can be hooked with different events.
 
 - invoke
+
 When a context has completed, this event is fired right before `main` is called. Includes get the context passed as last parameter and execute tasks when everything is loaded, but before `main` is called.
 
 - loaded
+
 Once all includes are loaded, this event is fired. Another list of files can be added now as if they were declared as includes in the manifest. The event is repeated as long as files get appended at this point.
 
 
