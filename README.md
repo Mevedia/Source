@@ -1,9 +1,9 @@
 
-Source is a native JS build system without external dependencies or the requirement for a console program, while also being a file managment system with module architecture. All instructions are handled by the
+Source is a native JS build system without external dependencies or the requirement for a console program, while also being a file / module loader system with asynchronous loading, resolving any depth of inclusions. All build instructions are handled by the
 manifest, by passing query parameters or the in-built backend with UI and preview options.
 
 
-It provides a unified workflow for developing in different environment, such as in the web, in worker and NodeJS. The path handling and file loading is the same everywhere.
+It provides a unified workflow for developing in different environments, such as in the web, in worker and NodeJS. The path handling and file loading is the same everywhere.
 
 
 ## Getting started
