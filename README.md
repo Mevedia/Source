@@ -164,6 +164,26 @@ Source.exports(function(app) {
 });
 ```
 
+#### Context events
+
+A context can be hooked with different events.
+
+- invoke
+
+When a context has completed, this event is fired right before `main` is called. Includes get the context passed as last parameter and execute tasks when everything is loaded, but before `main` is called.
+
+- loaded
+
+Once all includes are loaded, this event is fired. Another list of files can be added now as if they were declared as includes in the manifest. The event is repeated as long as files get appended at this point.
+
+
+
+### Nesting
+
+A context can include files and other contexts. When nesting a context, options declared in the parent-context will be passed through, so
+a child-context can receive options at inclusion time. One scenario is to pass a list of asynchronous things, that will be done before a deeper included file completes.
+
+
 
 #### Query parameters
 
@@ -238,26 +258,6 @@ Source.create({
 
 });
 ```
-
-#### Context events
-
-A context can be hooked with different events.
-
-- invoke
-
-When a context has completed, this event is fired right before `main` is called. Includes get the context passed as last parameter and execute tasks when everything is loaded, but before `main` is called.
-
-- loaded
-
-Once all includes are loaded, this event is fired. Another list of files can be added now as if they were declared as includes in the manifest. The event is repeated as long as files get appended at this point.
-
-
-
-
-### Nesting
-
-A context can include files and other contexts. When nesting a context, options declared in the parent-context will be passed through, so
-a child-context can receive options at inclusion time. One scenario is to pass a list of asynchronous things, that will be done before a deeper included file completes.
 
 
 
