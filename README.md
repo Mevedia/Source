@@ -189,7 +189,7 @@ A tree structure of all includes and their includes will be shown. The manifest 
 Plugins can be made for different stages, such as collection, processing, generating and any tasks in between. All tasks can be done asynchronous in the queue, for example the closure compiler is threaded. Examples can be found in `build/stack`.
 
 
-Calling the project with `source` parameter without value (like http://localhost/myproject?source) it will load the project with backend
+Calling the project with `source` parameter without value (like http://localhost/myproject?source) it will load the project with backend. Otherwise, your application is executed.
 
 ![alt text](https://mevedia.com/img/source_backend3.png "UI")
 
